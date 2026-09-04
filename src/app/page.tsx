@@ -1,5 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Featured } from "@/components/sections/Featured";
 import { Process } from "@/components/sections/Process";
@@ -11,7 +9,6 @@ import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 export default function Home() {
   return (
     <main className="min-h-[100dvh] relative bg-background">
-      <Navbar />
       <Hero />
       <Featured />
       <Process />
@@ -19,7 +16,6 @@ export default function Home() {
       <SocialProof />
       <OurPromise />
       <NewsletterCTA />
-      <Footer />
     </main>
   );
 }
