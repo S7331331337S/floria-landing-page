@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export function Hero() {
     return (
-        <section className="relative min-h-[100dvh] w-full flex items-center pt-24 pb-12 bg-black z-20">
+        <section className="relative min-h-[100dvh] w-full flex items-center pt-24 pb-12 bg-black z-20 overflow-x-clip">
 
             {/* Full width dark background image (this needs its own overflow hidden so it stays put) */}
             <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -61,12 +61,12 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
-                            <Button variant="primary" magnetic className="h-14 px-8 text-base bg-white text-black hover:bg-white/90">
+                            <ButtonLink href="/collections" variant="light" className="h-14 px-8 text-base">
                                 View Collections
-                            </Button>
-                            <Button variant="ghost" magnetic className="h-14 px-8 text-base text-white hover:bg-white/10">
+                            </ButtonLink>
+                            <ButtonLink href="/studio" variant="outline" className="h-14 px-8 text-base">
                                 Our Manifesto
-                            </Button>
+                            </ButtonLink>
                         </div>
                     </motion.div>
                 </div>

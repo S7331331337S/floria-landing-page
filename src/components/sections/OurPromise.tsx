@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Leaf } from "@phosphor-icons/react";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export function OurPromise() {
     return (
@@ -48,6 +49,21 @@ export function OurPromise() {
                 >
                     La Casa Del Amor works exclusively with independent growers within a 50-mile radius, ensuring every stem possesses a wild, architectural intent that mass floristry strips away.
                 </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className="mt-12 flex flex-wrap items-center justify-center gap-4"
+                >
+                    <ButtonLink href="/studio" variant="light" className="h-14 px-8 text-base">
+                        Inside the studio
+                    </ButtonLink>
+                    <ButtonLink href="/journal" variant="outline" className="h-14 px-8 text-base">
+                        Read the journal
+                    </ButtonLink>
+                </motion.div>
             </div>
 
         </section>
