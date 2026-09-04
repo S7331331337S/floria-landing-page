@@ -40,7 +40,7 @@ export function Navbar() {
                     {/* Logo (Asymmetric vibe - kept very stark) */}
                     <div className="flex items-center gap-2 group cursor-pointer">
                         <Plant weight="duotone" className="w-8 h-8 text-accent-foreground group-hover:rotate-12 transition-transform duration-500" />
-                        <span className="text-xl font-bold tracking-tighter">Floria.</span>
+                        <span className="text-xl font-bold tracking-tighter">La Casa Del Amor.</span>
                     </div>
 
                     {/* Desktop Nav */}

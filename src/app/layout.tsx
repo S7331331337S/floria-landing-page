@@ -13,8 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Floria | High-End Floral Design",
-  description: "Exquisite, architectural floral arrangements and modern botanical design.",
+  metadataBase: new URL("https://lacasadelamor.com"),
+  title: {
+    default: "La Casa Del Amor | Floral Design & Arrangements",
+    template: "%s | La Casa Del Amor",
+  },
+  description:
+    "La Casa Del Amor creates exquisite floral arrangements, wedding flowers, and modern botanical designs for unforgettable moments.",
+  keywords: [
+    "La Casa Del Amor",
+    "floral design",
+    "flower arrangements",
+    "wedding flowers",
+    "botanical design",
+  ],
+  authors: [{ name: "La Casa Del Amor" }],
+  creator: "La Casa Del Amor",
+  openGraph: {
+    type: "website",
+    siteName: "La Casa Del Amor",
+    title: "La Casa Del Amor | Floral Design & Arrangements",
+    description:
+      "Exquisite floral arrangements and modern botanical designs for unforgettable moments.",
+    url: "https://lacasadelamor.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La Casa Del Amor | Floral Design & Arrangements",
+    description:
+      "Exquisite floral arrangements and modern botanical designs for unforgettable moments.",
+  },
 };
 
 export default function RootLayout({
