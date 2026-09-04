@@ -5,7 +5,8 @@
 
 export const SITE = {
     name: "La Casa Del Amor",
-    tagline: "Architecture of Nature",
+    tagline: "Heather Close",
+    taglineColor: "#ffea94",
     url: "https://lacasadelamor.com",
     email: "hello@lacasadelamor.com",
     phone: "+1 (310) 555-0824",

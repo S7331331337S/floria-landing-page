@@ -69,7 +69,7 @@ export function SocialProof() {
                             className={`
                                 relative p-8 md:p-10 rounded-3xl bg-zinc-900/30 backdrop-blur-sm 
                                 border border-white/5 hover:border-white/10 hover:bg-zinc-900/50 
-                                transition-colors group flex flex-col justify-between
+                                transition-colors group flex flex-col justify-between shadow-sm
                                 ${review.colSpan} ${review.offset}
                             `}
                         >

@@ -48,16 +48,16 @@ export function Hero() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <span className="inline-block py-1 px-3 rounded-full border border-white/20 bg-white/10 text-white text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
-                            Studio & Archive
+                            Exotic Wildcraft
                         </span>
 
                         {/* Text forced to white for dark background visibility */}
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8 text-balance">
-                            Botanic<br />
-                            <span className="text-white/70 italic font-normal">Architecture.</span>
+                            Botanical<br />
+                            <span className="text-white/70 italic font-normal">Sculptures</span>
                         </h1>
-                        <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance">
-                            We design spaces and moments using rare, sculptural flora. Rejecting the generic bouquet for atmospheric living sculptures.
+                        <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance text-left">
+                            One-of-a-kind organic art design and artifacts. Thoughtfully grown, curated, and composed by hand for your pleasure.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
