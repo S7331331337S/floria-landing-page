@@ -52,7 +52,7 @@ export default function StudioPage() {
                         <div className="relative overflow-hidden rounded-[2.5rem] aspect-[4/5]">
                             <img
                                 src="/bouquet-1.webp"
-                                alt="An arrangement from the studio\u2019s spring archive"
+                                alt="An arrangement from the studio&rsquo;s spring archive"
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-[inherit] pointer-events-none" />
