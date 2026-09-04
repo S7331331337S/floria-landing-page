@@ -56,8 +56,8 @@ export function Hero() {
                             Botanical<br />
                             <span className="text-white/70 italic font-normal">Sculptures</span>
                         </h1>
-                        <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance">
-                            One-of-a-kind botanical art grown, gathered, and composed by hand. Nothing mass-produced. Nothing stays the same.
+                        <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance text-left">
+                            One-of-a-kind organic art design and artifacts. Thoughtfully grown, curated, and composed by hand for your pleasure.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
