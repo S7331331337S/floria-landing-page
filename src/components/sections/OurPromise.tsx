@@ -46,7 +46,7 @@ export function OurPromise() {
                     transition={{ delay: 0.4 }}
                     className="text-lg md:text-xl text-muted-foreground w-full max-w-[45ch] leading-relaxed mx-auto text-balance"
                 >
-                    Floria works exclusively with independent growers within a 50-mile radius, ensuring every stem possesses a wild, architectural intent that mass floristry strips away.
+                    La Casa Del Amor works exclusively with independent growers within a 50-mile radius, ensuring every stem possesses a wild, architectural intent that mass floristry strips away.
                 </motion.p>
             </div>
 

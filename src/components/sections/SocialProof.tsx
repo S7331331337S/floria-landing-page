@@ -5,7 +5,7 @@ import { Star, Quotes } from "@phosphor-icons/react";
 
 const REVIEWS = [
     {
-        text: "Floria totally transformed our gallery space. It didn't look like flowers; it looked like living art.",
+        text: "La Casa Del Amor totally transformed our gallery space. It didn't look like flowers; it looked like living art.",
         author: "Amara Osei",
         role: "Gallery Director",
         colSpan: "md:col-span-4",
