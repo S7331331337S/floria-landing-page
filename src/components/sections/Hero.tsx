@@ -54,7 +54,7 @@ export function Hero() {
                         {/* Text forced to white for dark background visibility */}
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8 text-balance">
                             Botanic<br />
-                            <span className="text-white/70 italic font-normal">Architecture.</span>
+                            <span className="text-white/70 italic font-normal">Sculptures</span>
                         </h1>
                         <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance">
                             We design spaces and moments using rare, sculptural flora. Rejecting the generic bouquet for atmospheric living sculptures.
