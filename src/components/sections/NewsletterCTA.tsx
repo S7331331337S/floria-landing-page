@@ -26,10 +26,10 @@ export function NewsletterCTA() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 z-0 pointer-events-none" />
 
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 z-10">
-                        Join the Studio Archive.
+                        Join La Casa Del Amor.
                     </h2>
                     <p className="text-lg text-white/80 max-w-[35ch] mb-12 z-10 text-balance">
-                        Receive bi-weekly essays on spatial design, exclusive access to limited botanical runs, and nothing else.
+                        Recieve first look at our new releases, seasonal offerings, and Garden parties and nothing else.
                     </p>
 
                     <form className="w-full max-w-md relative z-10 flex flex-col sm:flex-row gap-3">
