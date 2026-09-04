@@ -29,7 +29,7 @@ export function NewsletterCTA() {
                         Join La Casa Del Amor.
                     </h2>
                     <p className="text-lg text-white/80 max-w-[35ch] mb-12 z-10 text-balance">
-                        Receive xclusive access to our seaonal limited botanical runs, and nothing else.
+                        Recieve the love and get a first looks at our new releases, local events, and seasonal offerings. and nothing else.
                     </p>
 
                     <form className="w-full max-w-md relative z-10 flex flex-col sm:flex-row gap-3">
