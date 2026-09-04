@@ -57,7 +57,7 @@ export function Hero() {
                             <span className="text-white/70 italic font-normal">Sculptures</span>
                         </h1>
                         <p className="text-lg text-white/80 leading-relaxed max-w-[40ch] mb-10 text-balance">
-                            We design spaces and moments using rare, sculptural flora. Rejecting the generic bouquet for atmospheric living sculptures.
+                            One-of-a-kind botanical art grown, gathered, and composed by hand. Nothing mass-produced. Nothing stays the same.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
