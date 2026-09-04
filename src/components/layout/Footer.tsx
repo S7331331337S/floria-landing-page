@@ -21,7 +21,7 @@ export function Footer() {
                     <div className="md:col-span-5 flex flex-col text-zinc-50">
                         <div className="flex flex-col mb-8">
                             <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-white mb-2">La Casa Del Amor.</h2>
-                            <p className="text-xl md:text-2xl text-accent font-serif italic opacity-90">Architecture of Nature</p>
+                            <p className="text-xl md:text-2xl font-serif italic opacity-90" style={{ color: '#ffea94' }}>Heather Close</p>
                         </div>
                         <p className="text-zinc-400 max-w-[35ch] leading-relaxed text-lg">
                             An independent floral styling studio for modern, sculptural living. Sourced locally, curated globally.
