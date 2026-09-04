@@ -48,7 +48,7 @@ export function Hero() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <span className="inline-block py-1 px-3 rounded-full border border-white/20 bg-white/10 text-white text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
-                            Living Compositions
+                            Exotic Wildcraft
                         </span>
 
                         {/* Text forced to white for dark background visibility */}
