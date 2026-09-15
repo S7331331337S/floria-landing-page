@@ -8,7 +8,7 @@ const BOUQUETS = [
         id: 1,
         title: "Ethereal Greens",
         price: "$120",
-        image: "/bouquet-1.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-33BB5ED2-3R2XzDJ5mciSGTijBL4Wackhu32w1e.jpeg",
         aspect: "aspect-[3/4]",
         offset: "md:mt-0",
     },
@@ -16,7 +16,7 @@ const BOUQUETS = [
         id: 2,
         title: "Midnight Orchid",
         price: "$185",
-        image: "/bouquet-2.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-F25D7E43-UGEZH6UkRJOFtMXsVH0HEkfoLD88vr.jpeg",
         aspect: "aspect-square",
         offset: "md:mt-24", // Asymmetric offset
     },
@@ -24,7 +24,7 @@ const BOUQUETS = [
         id: 3,
         title: "Blush Peony Structura",
         price: "$95",
-        image: "/bouquet-3.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-189D9254-lX9Xqx1oxJkhxAvvy8s9tEPC6y4n8k.jpeg",
         aspect: "aspect-[4/5]",
         offset: "md:mt-12",
     }

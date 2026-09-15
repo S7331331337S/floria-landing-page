@@ -8,35 +8,35 @@ const BENTOS = [
         title: "The Wedding Archive",
         desc: "Sculptural centerpieces and avant-garde bridal arrangements.",
         colSpan: "md:col-span-8",
-        image: "/collection-1.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-33BB5ED2-3R2XzDJ5mciSGTijBL4Wackhu32w1e.jpeg",
     },
     {
         id: 2,
         title: "Weekly Studio Subs",
         desc: "Seasonal rotations delivered.",
         colSpan: "md:col-span-4",
-        image: "/collection-2.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-F25D7E43-UGEZH6UkRJOFtMXsVH0HEkfoLD88vr.jpeg",
     },
     {
         id: 3,
         title: "Dried & Preserved",
         desc: "Eternal structures.",
         colSpan: "md:col-span-4",
-        image: "/collection-3.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-189D9254-lX9Xqx1oxJkhxAvvy8s9tEPC6y4n8k.jpeg",
     },
     {
         id: 4,
         title: "Corporate Installs",
         desc: "Atmospheric lobbying.",
         colSpan: "md:col-span-4",
-        image: "/collection-4.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-20EB78DF-d7HZBHe1FBJCzLaPavGkuu4ZduvzLR.jpeg",
     },
     {
         id: 5,
         title: "Workshops",
         desc: "Master the structure of nature.",
         colSpan: "md:col-span-4",
-        image: "/collection-5.webp",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-33BB5ED2-3R2XzDJ5mciSGTijBL4Wackhu32w1e.jpeg",
     }
 ];
 
