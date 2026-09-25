@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw photo sources for `npm run images` (outputs in public/story are committed)
+/assets-src
+/.cache

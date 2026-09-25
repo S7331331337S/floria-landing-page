@@ -1,60 +1,58 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const display = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lacasadelamor.com"),
   title: {
-    default: "La Casa Del Amor | Floral Design & Arrangements",
+    default: "La Casa Del Amor | Living art by Heather Close",
     template: "%s | La Casa Del Amor",
   },
   description:
-    "La Casa Del Amor creates exquisite floral arrangements, wedding flowers, and modern botanical designs for unforgettable moments.",
-  keywords: [
-    "La Casa Del Amor",
-    "floral design",
-    "flower arrangements",
-    "wedding flowers",
-    "botanical design",
-  ],
-  authors: [{ name: "La Casa Del Amor" }],
+    "Step inside La Casa Del Amor: a greenhouse studio in Albany, New York where Heather Close raises kokedama, rare houseplants and garden-wild arrangements by hand.",
+  keywords: ["La Casa Del Amor", "Heather Close", "kokedama", "houseplants", "Albany", "floral design", "garden parties"],
+  authors: [{ name: "Heather Close" }],
   creator: "La Casa Del Amor",
   openGraph: {
     type: "website",
     siteName: "La Casa Del Amor",
-    title: "La Casa Del Amor | Floral Design & Arrangements",
-    description:
-      "Exquisite floral arrangements and modern botanical designs for unforgettable moments.",
+    title: "La Casa Del Amor | Living art by Heather Close",
+    description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
     url: "https://lacasadelamor.com",
+    images: [{ url: "/story/exterior.webp", width: 1875, height: 1406, alt: "The La Casa Del Amor greenhouse" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "La Casa Del Amor | Floral Design & Arrangements",
-    description:
-      "Exquisite floral arrangements and modern botanical designs for unforgettable moments.",
+    title: "La Casa Del Amor | Living art by Heather Close",
+    description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
+    images: ["/story/exterior.webp"],
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#06110b",
+  colorScheme: "dark",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground font-sans selection:bg-emerald-200 selection:text-emerald-950 overflow-x-hidden`}
-      >
+    <html lang="en">
+      <body className={`${display.variable} ${sans.variable} antialiased`}>
+        <noscript>
+          <style>{`[data-reveal]{visibility:visible!important}[data-intro],[data-t]{opacity:1!important;visibility:visible!important}`}</style>
+        </noscript>
         {children}
       </body>
     </html>
