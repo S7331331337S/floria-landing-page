@@ -8,6 +8,7 @@ import { MEDIA } from "@/lib/motion";
 import { hero, invitation, site } from "@/content/story";
 import { Foliage, type LeafPlacement } from "../flora/Foliage";
 import { Motes } from "../fx/Motes";
+import { JunglePlate } from "../fx/JunglePlate";
 import { Reveal } from "../fx/Reveal";
 
 /*
@@ -58,10 +59,11 @@ export function Invitation() {
       data-chapter="invitation"
       className="relative flex min-h-[125svh] flex-col overflow-hidden bg-night text-cream"
     >
+      <JunglePlate className="opacity-80" />
       <div
         aria-hidden
         className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 45%, #24472d 0%, #10291b 45%, #06110b 82%)" }}
+        style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(36,71,45,0.3), rgba(6,17,11,0.55) 85%)" }}
       />
       <div aria-hidden className="mist pointer-events-none absolute -inset-[10%] opacity-25" style={{ animation: "drift 24s ease-in-out infinite alternate" }} />
 

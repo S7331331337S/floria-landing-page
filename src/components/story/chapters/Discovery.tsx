@@ -7,6 +7,7 @@ import { DURATION, EASE, MEDIA, SCRUB } from "@/lib/motion";
 import { hero, threshold } from "@/content/story";
 import { Foliage, type LeafPlacement } from "../flora/Foliage";
 import { Motes } from "../fx/Motes";
+import { JunglePlate } from "../fx/JunglePlate";
 
 /*
  * THE DISCOVERY: hero + chapter I in one pinned, scroll-driven shot.
@@ -195,12 +196,13 @@ export function Discovery() {
       {/* sky: layered glow and light shafts */}
       <div
         data-layer="sky"
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 60% at 50% 45%, #24472d 0%, #10291b 42%, #06110b 80%), #06110b",
-        }}
+        className="absolute inset-0 bg-night"
       >
+        <JunglePlate priority />
+        <div
+          className="absolute inset-0"
+          style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(36,71,45,0.35), transparent 75%)" }}
+        />
         <div
           className="absolute inset-0 opacity-70 mix-blend-screen"
           style={{

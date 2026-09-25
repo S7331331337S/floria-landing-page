@@ -96,12 +96,20 @@ export const sculptures = {
   /** each word lights up as you scroll */
   statement:
     "Every plant here has a name, a temper, and a favorite window. I don't send them off as décor. I send them off as company.",
+  /** shown until Shopify is connected (see src/lib/collection.ts), then used to top up */
   plants: [
     { src: "/story/product-pink-princess.webp", alt: "Pink Princess philodendron", name: "Pink Princess" },
     { src: "/story/product-silver-begonia.webp", alt: "Silver begonia on moss", name: "Silver Begonia" },
     { src: "/story/product-string-of-pearls.webp", alt: "String of pearls cascading over a brick wall", name: "String of Pearls" },
     { src: "/story/product-prayer-plant.webp", alt: "Prayer plant in a stone pot", name: "Prayer Plant" },
     { src: "/story/product-variegated-rubber.webp", alt: "Variegated rubber plant", name: "Variegated Rubber" },
+  ],
+  /** hand-coloured herbarium plates drifting behind the living plants */
+  herbarium: [
+    { src: "/story/elements/plate-anthurium.webp", caption: "Anthurium · Tab. I" },
+    { src: "/story/elements/plate-alocasia.webp", caption: "Alocasia · Tab. II" },
+    { src: "/story/elements/plate-monstera.webp", caption: "Monstera · Tab. III" },
+    { src: "/story/elements/plate-calathea.webp", caption: "Calathea · Tab. IV" },
   ],
 };
 

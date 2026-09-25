@@ -10,12 +10,18 @@ import { Studio } from "@/components/story/chapters/Studio";
 import { Moments } from "@/components/story/chapters/Moments";
 import { Garden } from "@/components/story/chapters/Garden";
 import { Invitation } from "@/components/story/chapters/Invitation";
+import { getCollection } from "@/lib/collection";
+
+// re-check Shopify for new pieces every 5 minutes
+export const revalidate = 300;
 
 /**
  * The journey, top to bottom. Reorder chapters here; each one is
  * self-contained in components/story/chapters.
  */
-export default function Home() {
+export default async function Home() {
+  const pieces = await getCollection();
+
   return (
     <SmoothScroll>
       <main className="relative">
@@ -23,7 +29,7 @@ export default function Home() {
         <Canopy leaves={SEAM_MOSS} />
         <Craft />
         <Canopy leaves={SEAM_DAYLIGHT} />
-        <Sculptures />
+        <Sculptures pieces={pieces} />
         <Studio />
         <Canopy leaves={SEAM_DUSK} />
         <Moments />
