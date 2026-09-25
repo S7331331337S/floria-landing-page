@@ -15,7 +15,7 @@ const sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lacasadelamor.com"),
+  metadataBase: new URL("http://lacasadelamor.app"),
   title: {
     default: "La Casa Del Amor | Living art by Heather Close",
     template: "%s | La Casa Del Amor",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     siteName: "La Casa Del Amor",
     title: "La Casa Del Amor | Living art by Heather Close",
     description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
-    url: "https://lacasadelamor.com",
-    images: [{ url: "/story/exterior.webp", width: 1875, height: 1406, alt: "The La Casa Del Amor greenhouse" }],
+    url: "http://lacasadelamor.app",
+    images: [{ url: "http://lacasadelamor.app/story/exterior.webp", width: 1875, height: 1406, alt: "The La Casa Del Amor greenhouse" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "La Casa Del Amor | Living art by Heather Close",
     description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
-    images: ["/story/exterior.webp"],
+    images: ["http://lacasadelamor.app/story/exterior.webp"],
   },
 };
 
