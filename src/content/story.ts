@@ -15,8 +15,8 @@ export const site = {
   name: "La Casa Del Amor",
   owner: "Heather Close",
   place: "Albany, New York",
-  /** temporary destination until the Shopify storefront is connected */
-  shopUrl: "https://lacasadelamor.app",
+  /** storefront project, deployed at shop.lacasadelamor.app in production */
+  shopUrl: "https://shop.lacasadelamor.app",
   exploreUrl: "https://lacasadelamor.app",
   instagram: "https://instagram.com/",
 };
