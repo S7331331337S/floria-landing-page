@@ -103,12 +103,16 @@ export const sculptures = {
     { src: "/story/product-prayer-plant.webp", alt: "Prayer plant in a stone pot", name: "Prayer Plant" },
     { src: "/story/product-variegated-rubber.webp", alt: "Variegated rubber plant", name: "Variegated Rubber" },
   ],
-  /** hand-coloured herbarium plates drifting behind the living plants */
+  /**
+   * Hand-painted botanical cutouts drifting through the margins.
+   * Add more: drop the image into assets-src/botanicals, run `npm run cutouts`,
+   * then list it here with its pixel size.
+   */
   herbarium: [
-    { src: "/story/elements/plate-anthurium.webp", caption: "Anthurium · Tab. I" },
-    { src: "/story/elements/plate-alocasia.webp", caption: "Alocasia · Tab. II" },
-    { src: "/story/elements/plate-monstera.webp", caption: "Monstera · Tab. III" },
-    { src: "/story/elements/plate-calathea.webp", caption: "Calathea · Tab. IV" },
+    { src: "/story/botanicals/calathea-spathe.webp", w: 1261, h: 1272, caption: "Calathea · with spathe" },
+    { src: "/story/botanicals/lance-aroid.webp", w: 1026, h: 1294, caption: "Anthurium · lance leaf" },
+    { src: "/story/botanicals/heart-arum.webp", w: 922, h: 1306, caption: "Philodendron · in bloom" },
+    { src: "/story/botanicals/mossy-anthurium.webp", w: 871, h: 1292, caption: "Anthurium · on moss" },
   ],
 };
 
@@ -159,6 +163,11 @@ export const invitation = {
   heading: "Take a little of the garden home.",
   body: "Thank you for walking through with me. The door stays open, so come back anytime.",
   signature: "With love, Heather",
+  /** painted plants rising either side of the invitation */
+  botanicals: [
+    { src: "/story/botanicals/philodendron.webp", w: 984, h: 1291 },
+    { src: "/story/botanicals/mossy-anthurium.webp", w: 871, h: 1292 },
+  ],
   explore: "Explore More",
   shop: "Shop the Collections",
 };

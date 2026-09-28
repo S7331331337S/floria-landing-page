@@ -21,7 +21,6 @@ const FRAME: LeafPlacement[] = [
   { kind: "palm", x: -8, y: -30, w: 32, r: -150, shade: 0.35, exit: "left" },
   { kind: "alocasia", x: 80, y: 30, w: 24, wm: 44, r: 46, shade: 0.2, dew: 4, exit: "right", sway: true },
   { kind: "banana", x: 86, y: -24, w: 16, r: -165, shade: 0.3, flip: true, exit: "right", mobile: false },
-  { kind: "anthurium", x: 72, y: 66, w: 18, wm: 34, r: 26, shade: 0.1, dew: 3, exit: "right", sway: true },
   { kind: "fern", x: 10, y: 72, w: 20, wm: 34, r: -12, shade: 0.2, exit: "left", sway: true },
   { kind: "calathea", x: 50, y: 84, w: 12, r: 6, shade: 0.25, exit: "right", mobile: false },
 ];
@@ -41,6 +40,13 @@ export function Invitation() {
           ease: "power2.out",
           stagger: 0.04,
           scrollTrigger: { trigger: root.current, start: "top bottom", end: "top top", scrub: true },
+        });
+        gsap.from(q("[data-botanical]"), {
+          yPercent: 45,
+          opacity: 0,
+          ease: "power2.out",
+          stagger: 0.1,
+          scrollTrigger: { trigger: root.current, start: "top 80%", end: "center center", scrub: true },
         });
         gsap.fromTo(
           q("[data-wreath]"),
@@ -72,6 +78,19 @@ export function Invitation() {
       </div>
 
       <Foliage leaves={FRAME} />
+
+      {/* painted plants rising either side of the invitation */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] flex items-end justify-between">
+        {invitation.botanicals.map((b, i) => (
+          <div
+            key={b.src}
+            data-botanical
+            className={`w-[46vw] md:w-[24vw] ${i === 0 ? "-ml-[10vw] md:-ml-[2vw]" : "-mr-[10vw] md:-mr-[2vw]"}`}
+          >
+            <Image src={b.src} alt="" width={b.w} height={b.h} sizes="(min-width: 768px) 24vw, 46vw" className="h-auto w-full brightness-[0.82] saturate-[0.9]" />
+          </div>
+        ))}
+      </div>
       <Motes density={2.5} />
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-[20vh] text-center">

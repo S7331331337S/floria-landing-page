@@ -24,11 +24,12 @@ const FLOAT = [
 ];
 
 // herbarium plates sit further back: slower, softer, slightly turned
+// painted botanicals sit a little further back: slower and softly shadowed
 const PLATE_SLOTS = [
-  { x: 82, y: 1, w: 13, wm: 26, speed: -0.2, r: 4 },
-  { x: 3, y: 27, w: 12, wm: 24, speed: -0.35, r: -5 },
-  { x: 84, y: 62, w: 12, wm: 24, speed: -0.15, r: 3 },
-  { x: 24, y: 88, w: 12, wm: 24, speed: -0.3, r: -4 },
+  { x: 80, y: 0, w: 19, wm: 34, speed: -0.2, r: 3 },
+  { x: -2, y: 25, w: 18, wm: 32, speed: -0.35, r: -4 },
+  { x: 81, y: 60, w: 17, wm: 30, speed: -0.15, r: 2 },
+  { x: 20, y: 86, w: 16, wm: 30, speed: -0.3, r: -3 },
 ];
 
 const LEAVES: LeafPlacement[] = [
@@ -73,13 +74,13 @@ export function Sculptures({ pieces = sculptures.plants }: { pieces?: Collection
             <figure
               key={plate.src}
               data-speed={p.speed}
-              className="leaf-slot absolute opacity-75"
+              className="leaf-slot absolute"
               style={{ left: `${p.x}%`, top: `${p.y}%`, "--w": `${p.w}vw`, "--wm": `${p.wm}vw` } as CSSProperties}
             >
-              <div style={{ rotate: `${p.r}deg` }} className="shadow-[0_24px_50px_-24px_rgba(60,45,20,0.45)]">
-                <Image src={plate.src} alt="" width={1800} height={2400} sizes="(min-width: 768px) 16vw, 30vw" className="h-auto w-full" />
+              <div style={{ rotate: `${p.r}deg` }} className="drop-shadow-[0_28px_30px_rgba(60,45,20,0.22)]">
+                <Image src={plate.src} alt="" width={plate.w} height={plate.h} sizes="(min-width: 768px) 19vw, 34vw" className="h-auto w-full" />
               </div>
-              <figcaption className="display mt-2 text-center text-sm italic tracking-wide text-ink/50">{plate.caption}</figcaption>
+              <figcaption className="display mt-1 text-center text-sm italic tracking-wide text-ink/45">{plate.caption}</figcaption>
             </figure>
           );
         })}
