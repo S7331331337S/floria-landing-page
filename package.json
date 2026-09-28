@@ -9,7 +9,8 @@
     "lint": "eslint",
     "images": "node scripts/prepare-images.mjs",
     "elements": "esbuild scripts/render-elements.ts --bundle --platform=node --format=esm --external:sharp --outfile=.cache/render-elements.mjs --log-level=warning && node .cache/render-elements.mjs",
-    "cutouts": "node scripts/cutout.mjs"
+    "cutouts": "node scripts/cutout.mjs",
+    "leaves": "node scripts/leaves.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -23,6 +23,8 @@ const FRAME: LeafPlacement[] = [
   { kind: "banana", x: 86, y: -24, w: 16, r: -165, shade: 0.3, flip: true, exit: "right", mobile: false },
   { kind: "fern", x: 10, y: 72, w: 20, wm: 34, r: -12, shade: 0.2, exit: "left", sway: true },
   { kind: "calathea", x: 50, y: 84, w: 12, r: 6, shade: 0.25, exit: "right", mobile: false },
+  { img: "heart-01", x: 30, y: -6, w: 16, r: 170, shade: 0.35, blur: 2, exit: "left", mobile: false },
+  { img: "lance-01", x: 64, y: -10, w: 11, r: 200, shade: 0.3, exit: "right", sway: true },
 ];
 
 export function Invitation() {

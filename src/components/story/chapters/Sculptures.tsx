@@ -33,10 +33,11 @@ const PLATE_SLOTS = [
 ];
 
 const LEAVES: LeafPlacement[] = [
-  { kind: "fern", x: -6, y: 20, w: 18, r: 40, speed: 1.6, dew: 3, mobile: false },
-  { kind: "calathea", x: 88, y: 36, w: 14, r: -30, speed: 1.9, dew: 4 },
-  { kind: "monstera", x: 84, y: 76, w: 20, r: -20, speed: 1.4, dew: 5, mobile: false },
-  { kind: "anthurium", x: 2, y: 70, w: 13, r: 24, speed: 2.1, dew: 3 },
+  { img: "lance-14", x: -3, y: 18, w: 14, r: 40, speed: 1.6, mobile: false },
+  { img: "heart-07", x: 88, y: 38, w: 12, wm: 22, r: -30, speed: 1.9 },
+  { img: "lance-05", x: 86, y: 76, w: 11, r: -20, speed: 1.4, mobile: false },
+  { img: "heart-09", x: 3, y: 68, w: 7, wm: 14, r: 24, speed: 2.1 },
+  { kind: "anthurium", x: 58, y: 92, w: 10, r: 18, speed: 2.4, dew: 3, mobile: false },
 ];
 
 export function Sculptures({ pieces = sculptures.plants }: { pieces?: CollectionPiece[] }) {
