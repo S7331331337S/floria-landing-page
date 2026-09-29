@@ -1,5 +1,7 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { Leaf } from "./Leaf";
+import { PAINTED, type PaintedLeaf } from "./painted";
 import type { LeafKind } from "./shapes";
 
 /**
@@ -7,7 +9,10 @@ import type { LeafKind } from "./shapes";
  * vw so the composition scales with the screen.
  */
 export type LeafPlacement = {
-  kind: LeafKind;
+  /** a procedural vector leaf… */
+  kind?: LeafKind;
+  /** …or one of the hand-painted leaves from ./painted (takes priority) */
+  img?: PaintedLeaf;
   /** left edge, % of container */
   x: number;
   /** top edge, % of container */
@@ -35,6 +40,14 @@ export type LeafPlacement = {
   sway?: boolean;
   z?: number;
 };
+
+/** Painted leaves get their depth from brightness; vector leaves bake it into their colours. */
+function filterFor(l: LeafPlacement) {
+  const parts: string[] = [];
+  if (l.img && l.shade) parts.push(`brightness(${(1 - l.shade * 0.75).toFixed(2)}) saturate(${(1 - l.shade * 0.3).toFixed(2)})`);
+  if (l.blur) parts.push(`blur(${l.blur}px)`);
+  return parts.length ? parts.join(" ") : undefined;
+}
 
 /**
  * Three nested wrappers per leaf so animations never fight:
@@ -66,12 +79,24 @@ export function Foliage({ leaves, className = "" }: { leaves: LeafPlacement[]; c
             style={
               {
                 rotate: `${l.r ?? 0}deg`,
-                filter: l.blur ? `blur(${l.blur}px)` : undefined,
+                filter: filterFor(l),
                 animationDelay: `${(i % 5) * -1.7}s`,
               } as CSSProperties
             }
           >
-            <Leaf kind={l.kind} seed={l.seed ?? i + 1} shade={l.shade} dew={l.dew} flip={l.flip} className="block h-auto w-full" />
+            {l.img ? (
+              <Image
+                src={PAINTED[l.img].src}
+                alt=""
+                width={PAINTED[l.img].w}
+                height={PAINTED[l.img].h}
+                sizes={`(min-width: 768px) ${l.w}vw, ${l.wm ?? l.w * 1.7}vw`}
+                className="block h-auto w-full"
+                style={l.flip ? { transform: "scaleX(-1)" } : undefined}
+              />
+            ) : (
+              <Leaf kind={l.kind ?? "monstera"} seed={l.seed ?? i + 1} shade={l.shade} dew={l.dew} flip={l.flip} className="block h-auto w-full" />
+            )}
           </div>
           </div>
         </div>

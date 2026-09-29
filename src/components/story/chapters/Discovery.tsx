@@ -27,7 +27,7 @@ const FAR: LeafPlacement[] = [
   { kind: "banana", x: 76, y: -8, w: 16, r: 28, shade: 0.78, blur: 2, flip: true },
   { kind: "fern", x: 64, y: 52, w: 20, r: 38, shade: 0.75, blur: 2 },
   { kind: "monstera", x: 6, y: 56, w: 24, r: -38, shade: 0.8, blur: 2 },
-  { kind: "alocasia", x: 43, y: 74, w: 14, r: 6, shade: 0.85, blur: 2, mobile: false },
+  { img: "heart-03", x: 43, y: 72, w: 13, r: 180, shade: 0.8, blur: 2, mobile: false },
 ];
 
 // mid: the leaves framing the wreath, with dew
@@ -39,14 +39,16 @@ const MID: LeafPlacement[] = [
   { kind: "banana", x: 90, y: -22, w: 16, r: -158, shade: 0.3, flip: true, exit: "up", mobile: false },
   { kind: "fern", x: 16, y: 68, w: 20, wm: 34, r: -18, shade: 0.25, exit: "down", sway: true },
   { kind: "calathea", x: 58, y: 78, w: 12, r: 12, shade: 0.35, exit: "down", mobile: false },
+  { img: "heart-07", x: 4, y: 58, w: 15, wm: 28, r: -28, shade: 0.2, exit: "left", sway: true },
+  { img: "lance-14", x: 86, y: 50, w: 13, r: 24, shade: 0.2, exit: "right", sway: true, mobile: false },
 ];
 
 // near: huge, out-of-focus leaves right in front of the lens
 const NEAR: LeafPlacement[] = [
-  { kind: "monstera", x: -34, y: 48, w: 56, wm: 90, r: -32, blur: 5, dew: 8, exit: "left" },
-  { kind: "banana", x: 84, y: 28, w: 34, wm: 55, r: 34, blur: 6, dew: 6, exit: "right" },
-  { kind: "palm", x: 64, y: -46, w: 44, r: 200, blur: 4, exit: "right", mobile: false },
-  { kind: "alocasia", x: -16, y: -40, w: 34, r: -164, blur: 3, exit: "up", mobile: false },
+  { img: "heart-02", x: -18, y: 56, w: 42, wm: 56, r: 24, blur: 5, exit: "left" },
+  { img: "lance-05", x: 82, y: 24, w: 22, wm: 42, r: -12, blur: 5, exit: "right" },
+  { img: "heart-04", x: 70, y: -24, w: 32, r: 160, blur: 4, exit: "right", mobile: false },
+  { img: "lance-01", x: -4, y: -30, w: 17, r: 165, blur: 3, exit: "up", mobile: false },
 ];
 
 /**
