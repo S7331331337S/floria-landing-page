@@ -13,7 +13,7 @@ import { Reveal } from "../fx/Reveal";
 
 /*
  * FINALE · STAY A WHILE
- * The jungle closes back in around the moss ring, bookending the opening
+ * The jungle closes back in around the hanging kokedama, bookending the opening
  * shot, and Heather sends you off to the shop.
  */
 const FRAME: LeafPlacement[] = [
@@ -51,9 +51,9 @@ export function Invitation() {
           scrollTrigger: { trigger: root.current, start: "top 80%", end: "center center", scrub: true },
         });
         gsap.fromTo(
-          q("[data-ring]"),
-          { rotate: -25, scale: 0.7, opacity: 0 },
-          { rotate: 15, scale: 1, opacity: 0.9, ease: "none", scrollTrigger: { trigger: root.current, start: "top bottom", end: "bottom bottom", scrub: true } },
+          q("[data-hanging]"),
+          { rotate: -5, scale: 0.8, yPercent: -12, opacity: 0 },
+          { rotate: 3, scale: 1, yPercent: 0, opacity: 0.9, ease: "none", scrollTrigger: { trigger: root.current, start: "top bottom", end: "bottom bottom", scrub: true } },
         );
       });
     },
@@ -75,8 +75,8 @@ export function Invitation() {
       />
       <div aria-hidden className="mist pointer-events-none absolute -inset-[10%] opacity-25" style={{ animation: "drift 24s ease-in-out infinite alternate" }} />
 
-      <div data-ring className="pointer-events-none absolute inset-0 m-auto h-[min(92vmin,900px)] w-[min(92vmin,900px)] opacity-0">
-        <Image src={hero.portal.src} alt="" fill sizes="92vmin" className="object-contain opacity-35" />
+      <div data-hanging className="pointer-events-none absolute inset-0 m-auto aspect-[1150/1921] h-[min(96svh,1000px)] origin-top opacity-0">
+        <Image src={hero.portal.src} alt="" fill sizes="(min-width: 768px) 40vw, 80vw" className="object-contain opacity-35" />
       </div>
 
       <Foliage leaves={FRAME} />

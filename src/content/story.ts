@@ -40,9 +40,9 @@ export const hero = {
   title: ["La Casa", "Del Amor"],
   whisper: "A house of living things",
   cue: "Scroll to step inside",
-  /** appears as the moss ring opens and the greenhouse comes into view */
+  /** appears as we fall through the moss ball and the greenhouse comes into view */
   aside: "Oh, hello. You found us.",
-  portal: { src: "/moss-ring.webp", alt: "A living ring of moss, kokedama, staghorn fern and air plants" },
+  portal: { src: "/hanging-kokedama.webp", alt: "A dracaena kokedama hanging on twine, rhipsalis trailing beneath the moss ball" },
   reveal: { src: "/story/exterior.webp", alt: "The cedar greenhouse behind Heather's house, hanging ferns at the door" },
 };
 

@@ -13,8 +13,8 @@ import { JunglePlate } from "../fx/JunglePlate";
  * THE DISCOVERY: hero + chapter I in one pinned, scroll-driven shot.
  *
  *   intro ─ the jungle fades up, leaves settle in, the name rises
- *   push  ─ leaves part to the edges, the moss ring swells toward the camera
- *   enter ─ we pass through the moss ring's heart into the greenhouse photo
+ *   push  ─ leaves part to the edges, the hanging kokedama swings toward the camera
+ *   enter ─ we fall into the moss ball and come out inside the greenhouse photo
  *   greet ─ Heather introduces herself over the photo
  *
  * Leaf layouts below are the art direction. Nudge x / y / w / r to recompose.
@@ -30,7 +30,7 @@ const FAR: LeafPlacement[] = [
   { img: "heart-03", x: 43, y: 72, w: 13, r: 180, shade: 0.8, blur: 2, mobile: false },
 ];
 
-// mid: the leaves framing the moss ring, with dew
+// mid: the leaves framing the hanging kokedama, with dew
 const MID: LeafPlacement[] = [
   { kind: "monstera", x: -13, y: 38, w: 34, wm: 62, r: -52, shade: 0.3, dew: 6, exit: "left", sway: true },
   { kind: "alocasia", x: 79, y: 26, w: 24, wm: 44, r: 50, shade: 0.25, dew: 5, exit: "right", sway: true },
@@ -78,7 +78,6 @@ export function Discovery() {
 
       mm.add({ desktop: MEDIA.desktop, mobile: MEDIA.mobile, reduce: MEDIA.reduce }, (ctx) => {
         const { desktop, reduce } = ctx.conditions as Record<string, boolean>;
-        const portal = q("[data-portal]")[0] as HTMLElement;
         const window_ = q("[data-window]")[0] as HTMLElement;
 
         if (reduce) {
@@ -116,7 +115,6 @@ export function Discovery() {
           .to(q("[data-intro]"), { opacity: 1, duration: 1.4, stagger: 0.18, ease: "power2.out" }, 1.7);
 
         // ── the scroll shot ───────────────────────────────────────────
-        const holeStart = () => portal.offsetWidth * 0.24;
         const holeEnd = () => Math.hypot(window.innerWidth, window.innerHeight) / 2 + 40;
 
         const tl = gsap.timeline({
@@ -135,7 +133,7 @@ export function Discovery() {
           // the name drifts up and away
           .to(q("[data-title-line]"), { yPercent: -45, opacity: 0, stagger: 0.25, duration: 1.6, ease: "power1.in" }, 0)
           .to(q("[data-intro]"), { opacity: 0, duration: 0.9 }, 0)
-          // the moss ring comes into focus
+          // the kokedama comes into focus
           .to(q("[data-portal-wrap]"), { opacity: 1, scale: 1, duration: 2 }, 0)
           .fromTo(window_, { opacity: 0 }, { opacity: 1, duration: 1.4 }, 0.6)
           // leaves part like curtains
@@ -163,13 +161,13 @@ export function Discovery() {
             },
             0.8,
           )
-          // push through the heart of the moss ring
-          .fromTo(portal, { scale: 1 }, { scale: 9, duration: 4, ease: "power2.in" }, 2)
+          // fly at the moss ball, then open into the greenhouse from its heart
+          .fromTo(q("[data-portal]"), { scale: 1 }, { scale: 9, duration: 4, ease: "power2.in" }, 2)
           .fromTo(
             window_,
-            { clipPath: () => `circle(${holeStart()}px at 50% 50%)` },
-            { clipPath: () => `circle(${holeEnd()}px at 50% 50%)`, duration: 4, ease: "power2.in" },
-            2,
+            { clipPath: "circle(0px at 50% 50%)" },
+            { clipPath: () => `circle(${holeEnd()}px at 50% 50%)`, duration: 3, ease: "power2.in" },
+            3.2,
           )
           .fromTo(q("[data-photo]"), { scale: 1.5 }, { scale: 1.1, duration: 4, ease: "power1.out" }, 2)
           .to(q("[data-portal-wrap]"), { opacity: 0, duration: 0.8 }, 5.2)
@@ -224,7 +222,16 @@ export function Discovery() {
         style={{ animation: "drift 22s ease-in-out infinite alternate" }}
       />
 
-      {/* the world behind the moss ring */}
+      {/* the hanging kokedama: ball centred in the frame so the push lands on the moss */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div data-portal-wrap className="relative aspect-[1150/1921] h-[min(94svh,1000px)] shrink-0 opacity-0">
+          <div data-portal className="h-full w-full">
+            <Image src={hero.portal.src} alt={hero.portal.alt} fill priority sizes="(min-width: 768px) 60vw, 100vw" className="object-contain" />
+          </div>
+        </div>
+      </div>
+
+      {/* the greenhouse, opening out of the moss ball */}
       <div data-window className="absolute inset-0 opacity-0" style={{ clipPath: "circle(0px at 50% 50%)" }}>
         <Image
           data-photo
@@ -240,16 +247,6 @@ export function Discovery() {
           className="absolute inset-0 opacity-0"
           style={{ background: "linear-gradient(to top, rgba(6,17,11,0.92) 8%, rgba(6,17,11,0.45) 45%, rgba(6,17,11,0.15))" }}
         />
-      </div>
-
-      {/* the moss ring portal */}
-      <div
-        data-portal-wrap
-        className="pointer-events-none absolute inset-0 m-auto h-[min(80vmin,780px)] w-[min(80vmin,780px)] opacity-0"
-      >
-        <div data-portal className="h-full w-full">
-          <Image src={hero.portal.src} alt={hero.portal.alt} fill priority sizes="80vmin" className="object-contain" />
-        </div>
       </div>
 
       <div data-layer="mid" className="absolute inset-0">
