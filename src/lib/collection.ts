@@ -41,7 +41,9 @@ export async function getCollection(): Promise<CollectionPiece[]> {
         src: n.featuredImage!.url,
         alt: n.featuredImage!.altText || n.title,
         name: n.title,
-        href: `${shop.origin}/products/${n.handle}`,
+        // This project's Shopify env points at a different store from the one www sells from,
+        // so /products/<handle> 404s on www (e.g. the Syngonium kokedama). Send people to the shop instead.
+        href: `${shop.origin}/shop`,
       }));
     // top up with local photos if the store has only a few products
     return pieces.length >= MAX ? pieces : [...pieces, ...sculptures.plants].slice(0, MAX);

@@ -10,6 +10,7 @@ import { Foliage, type LeafPlacement } from "../flora/Foliage";
 import { Motes } from "../fx/Motes";
 import { JunglePlate } from "../fx/JunglePlate";
 import { Reveal } from "../fx/Reveal";
+import { SiteFooter } from "@/components/footer/SiteFooter";
 
 /*
  * FINALE · STAY A WHILE
@@ -124,15 +125,7 @@ export function Invitation() {
         </div>
       </div>
 
-      <footer className="relative z-10 flex flex-col items-center justify-between gap-3 border-t border-cream/10 px-6 py-6 text-xs tracking-wide text-cream/50 md:flex-row md:px-16">
-        <span className="display text-base italic text-cream/70">{site.name}</span>
-        <span>
-          {site.place} · Grown by hand by {site.owner}
-        </span>
-        <a href={site.instagram} className="transition hover:text-gold">
-          Instagram
-        </a>
-      </footer>
+      <SiteFooter />
     </section>
   );
 }
