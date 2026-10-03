@@ -18,7 +18,6 @@ export const site = {
   /** temporary destination until the Shopify storefront is connected */
   shopUrl: "https://lacasadelamor.app",
   exploreUrl: "https://lacasadelamor.app",
-  instagram: "https://instagram.com/",
 };
 
 export type Photo = { src: string; alt: string };
