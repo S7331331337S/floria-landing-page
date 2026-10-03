@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     template: "%s | La Casa Del Amor",
   },
   description:
-    "Step inside La Casa Del Amor: a greenhouse studio in Albany, New York where Heather Close raises kokedama, rare houseplants and garden-wild arrangements by hand.",
-  keywords: ["La Casa Del Amor", "Heather Close", "kokedama", "houseplants", "Albany", "floral design", "garden parties"],
+    "Step inside La Casa Del Amor: a greenhouse studio in Albany, New York where Heather Close raises kokedama, plant mounts and exotic houseplant arrangements by hand.",
+  keywords: ["La Casa Del Amor", "Heather Close", "kokedama", "houseplants", "Albany", "plant mounts", "staghorn fern", "tillandsia", "garden parties"],
   authors: [{ name: "Heather Close" }],
   creator: "La Casa Del Amor",
   openGraph: {

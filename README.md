@@ -19,7 +19,7 @@ npm run build
 | II | **Hands in the Soil** | Scrolling turns sideways into a horizontal walk through Gather → Wrap → Bind → Wait. |
 | III | **Living Sculptures** | Daylight. Her statement lights up word by word while plants float past at different depths. |
 | IV | **The Studio** | A doorway-shaped window opens until the studio fills the screen. |
-| V | **Moments** | Evening. Three arrangements fan out like cards; cut-out bouquets drift in. |
+| V | **Moments** | Evening. Three kokedama photos fan out like cards; cut-out foliage arrangements drift in. |
 | VI | **The Garden** | Golden hour. We pull back from one flower bed to the whole garden, then flip through snapshots. |
 | ∞ | **Stay a While** | Leaves close back around the wreath. *Explore More* and *Shop the Collections*. |
 
