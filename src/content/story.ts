@@ -40,9 +40,9 @@ export const hero = {
   title: ["La Casa", "Del Amor"],
   whisper: "A house of living things",
   cue: "Scroll to step inside",
-  /** appears as the wreath opens and the greenhouse comes into view */
+  /** appears as the moss ring opens and the greenhouse comes into view */
   aside: "Oh, hello. You found us.",
-  portal: { src: "/d2.webp", alt: "A living wreath of amaryllis, dahlias and calla lilies" },
+  portal: { src: "/moss-ring.webp", alt: "A living ring of moss, kokedama, staghorn fern and air plants" },
   reveal: { src: "/story/exterior.webp", alt: "The cedar greenhouse behind Heather's house, hanging ferns at the door" },
 };
 
@@ -60,31 +60,32 @@ export const threshold = {
 export const craft = {
   kicker: "II · Hands in the Soil",
   heading: "Nothing here is rushed.",
-  intro: "Every piece is grown, wrapped and tied by hand. Let me show you how one comes to life.",
+  intro:
+    "Kokedama means \"moss ball\": a Japanese way of growing a plant without a pot that goes back more than 400 years. Every piece here is grown, wrapped and tied by hand. Let me show you how one comes to life.",
   steps: [
     {
       n: "01",
       title: "Gather",
       text: "I start with the plant, never the pot. I wait until it tells me who it wants to be.",
-      photo: { src: "/story/product-velvet-anthurium.webp", alt: "A velvet anthurium kokedama hanging in the greenhouse" },
+      photo: { src: "/story/real/heather-10.webp", alt: "A red coleus kokedama held up in the garden" },
     },
     {
       n: "02",
       title: "Wrap",
       text: "Roots are tucked into soil and sphagnum, then wrapped in living sheet moss. It smells like the forest after rain.",
-      photo: { src: "/story/kokedama-portrait.webp", alt: "A begonia kokedama wrapped in moss" },
+      photo: { src: "/story/real/heather-7.webp", alt: "Two heather kokedama wrapped in fresh moss on an olive-wood board" },
     },
     {
       n: "03",
       title: "Bind",
       text: "Each moss ball is tied with twine, one loop at a time. No two ever come out the same.",
-      photo: { src: "/story/product-kokedama-crown.webp", alt: "A twine-bound moss ball on a wooden stand" },
+      photo: { src: "/story/real/heather-6.webp", alt: "A variegated kokedama bound in string, held in one hand" },
     },
     {
       n: "04",
       title: "Wait",
       text: "Then the hardest part: patience. A few weeks of mist and light before it's ready for a new home.",
-      photo: { src: "/story/product-jewel-orchid.webp", alt: "A jewel orchid resting on a cut log among ferns" },
+      photo: { src: "/story/real/heather-9.webp", alt: "Two dracaena kokedama on a black stand and a white pedestal" },
     },
   ],
 };
@@ -97,11 +98,11 @@ export const sculptures = {
     "Every plant here has a name, a temper, and a favorite window. I don't send them off as décor. I send them off as company.",
   /** shown until Shopify is connected (see src/lib/collection.ts), then used to top up */
   plants: [
-    { src: "/story/product-pink-princess.webp", alt: "Pink Princess philodendron", name: "Pink Princess" },
+    { src: "/story/real/heather-3.webp", alt: "A dracaena kokedama held in the palm of a hand", name: "Dracaena Kokedama" },
+    { src: "/story/real/heather-4.webp", alt: "An orchid, peperomia and alocasia arrangement", name: "Orchid & Alocasia" },
+    { src: "/story/real/heather-5.webp", alt: "Three kokedama on black metal stands and a white pedestal", name: "Kokedama on Stands" },
     { src: "/story/product-silver-begonia.webp", alt: "Silver begonia on moss", name: "Silver Begonia" },
     { src: "/story/product-string-of-pearls.webp", alt: "String of pearls cascading over a brick wall", name: "String of Pearls" },
-    { src: "/story/product-prayer-plant.webp", alt: "Prayer plant in a stone pot", name: "Prayer Plant" },
-    { src: "/story/product-variegated-rubber.webp", alt: "Variegated rubber plant", name: "Variegated Rubber" },
   ],
   /**
    * Hand-painted botanical cutouts drifting through the margins.
@@ -127,17 +128,18 @@ export const studio = {
 
 // ─────────────────────────────────────────────── V. Moments
 export const moments = {
-  kicker: "V · Flowers for the Moments",
-  heading: "Some days call for a wedding. Some just call for a Tuesday.",
-  body: "I build arrangements the way the garden grows: a little wild, a little uneven, never stiff.",
-  bouquets: [
-    { src: "/bouquet-1.webp", alt: "Pink peonies in a loose garden arrangement" },
-    { src: "/collection-2.webp", alt: "White orchids and black calla lilies" },
-    { src: "/bouquet-3.webp", alt: "White lisianthus and fern in a stoneware vase" },
+  kicker: "V · Living Art for the Moments",
+  heading: "Some days call for a celebration. Some just call for a Tuesday.",
+  body: "I make each one the way the garden grows: a little wild, a little uneven, never stiff. Living art for a brighter space.",
+  pieces: [
+    { src: "/story/real/heather-1.webp", alt: "A dieffenbachia kokedama on a white pedestal" },
+    { src: "/story/real/heather-8.webp", alt: "Three variegated kokedama on pedestals and a black stand" },
+    { src: "/story/real/heather-11.webp", alt: "A group of five kokedama on the garden table" },
   ],
+  /** decorative foliage drifting in from the edges: moss, kokedama, staghorn, tillandsia, rhipsalis */
   cutouts: [
-    { src: "/d1.webp", alt: "" },
-    { src: "/hero-accent.webp", alt: "" },
+    { src: "/foliage-left.webp", w: 800, h: 720 },
+    { src: "/foliage-right.webp", w: 760, h: 720 },
   ],
 };
 

@@ -13,8 +13,8 @@ import { JunglePlate } from "../fx/JunglePlate";
  * THE DISCOVERY: hero + chapter I in one pinned, scroll-driven shot.
  *
  *   intro ─ the jungle fades up, leaves settle in, the name rises
- *   push  ─ leaves part to the edges, the wreath swells toward the camera
- *   enter ─ we pass through the wreath's heart into the greenhouse photo
+ *   push  ─ leaves part to the edges, the moss ring swells toward the camera
+ *   enter ─ we pass through the moss ring's heart into the greenhouse photo
  *   greet ─ Heather introduces herself over the photo
  *
  * Leaf layouts below are the art direction. Nudge x / y / w / r to recompose.
@@ -30,7 +30,7 @@ const FAR: LeafPlacement[] = [
   { img: "heart-03", x: 43, y: 72, w: 13, r: 180, shade: 0.8, blur: 2, mobile: false },
 ];
 
-// mid: the leaves framing the wreath, with dew
+// mid: the leaves framing the moss ring, with dew
 const MID: LeafPlacement[] = [
   { kind: "monstera", x: -13, y: 38, w: 34, wm: 62, r: -52, shade: 0.3, dew: 6, exit: "left", sway: true },
   { kind: "alocasia", x: 79, y: 26, w: 24, wm: 44, r: 50, shade: 0.25, dew: 5, exit: "right", sway: true },
@@ -135,7 +135,7 @@ export function Discovery() {
           // the name drifts up and away
           .to(q("[data-title-line]"), { yPercent: -45, opacity: 0, stagger: 0.25, duration: 1.6, ease: "power1.in" }, 0)
           .to(q("[data-intro]"), { opacity: 0, duration: 0.9 }, 0)
-          // the wreath comes into focus
+          // the moss ring comes into focus
           .to(q("[data-portal-wrap]"), { opacity: 1, scale: 1, duration: 2 }, 0)
           .fromTo(window_, { opacity: 0 }, { opacity: 1, duration: 1.4 }, 0.6)
           // leaves part like curtains
@@ -163,7 +163,7 @@ export function Discovery() {
             },
             0.8,
           )
-          // push through the heart of the wreath
+          // push through the heart of the moss ring
           .fromTo(portal, { scale: 1 }, { scale: 9, duration: 4, ease: "power2.in" }, 2)
           .fromTo(
             window_,
@@ -224,7 +224,7 @@ export function Discovery() {
         style={{ animation: "drift 22s ease-in-out infinite alternate" }}
       />
 
-      {/* the world behind the wreath */}
+      {/* the world behind the moss ring */}
       <div data-window className="absolute inset-0 opacity-0" style={{ clipPath: "circle(0px at 50% 50%)" }}>
         <Image
           data-photo
@@ -242,7 +242,7 @@ export function Discovery() {
         />
       </div>
 
-      {/* the wreath portal */}
+      {/* the moss ring portal */}
       <div
         data-portal-wrap
         className="pointer-events-none absolute inset-0 m-auto h-[min(80vmin,780px)] w-[min(80vmin,780px)] opacity-0"

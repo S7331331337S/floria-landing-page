@@ -13,7 +13,7 @@ import { Reveal } from "../fx/Reveal";
 
 /*
  * FINALE · STAY A WHILE
- * The jungle closes back in around the wreath, bookending the opening
+ * The jungle closes back in around the moss ring, bookending the opening
  * shot, and Heather sends you off to the shop.
  */
 const FRAME: LeafPlacement[] = [
@@ -51,7 +51,7 @@ export function Invitation() {
           scrollTrigger: { trigger: root.current, start: "top 80%", end: "center center", scrub: true },
         });
         gsap.fromTo(
-          q("[data-wreath]"),
+          q("[data-ring]"),
           { rotate: -25, scale: 0.7, opacity: 0 },
           { rotate: 15, scale: 1, opacity: 0.9, ease: "none", scrollTrigger: { trigger: root.current, start: "top bottom", end: "bottom bottom", scrub: true } },
         );
@@ -75,7 +75,7 @@ export function Invitation() {
       />
       <div aria-hidden className="mist pointer-events-none absolute -inset-[10%] opacity-25" style={{ animation: "drift 24s ease-in-out infinite alternate" }} />
 
-      <div data-wreath className="pointer-events-none absolute inset-0 m-auto h-[min(92vmin,900px)] w-[min(92vmin,900px)] opacity-0">
+      <div data-ring className="pointer-events-none absolute inset-0 m-auto h-[min(92vmin,900px)] w-[min(92vmin,900px)] opacity-0">
         <Image src={hero.portal.src} alt="" fill sizes="92vmin" className="object-contain opacity-35" />
       </div>
 

@@ -8,9 +8,9 @@ import { moments } from "@/content/story";
 import { Reveal } from "../fx/Reveal";
 
 /*
- * V · FLOWERS FOR THE MOMENTS
- * Evening light. Three arrangements rise as a stack and fan out like a
- * hand of cards while two cut-out bouquets drift in from the dark.
+ * V · LIVING ART FOR THE MOMENTS
+ * Evening light. Three kokedama photos rise as a stack and fan out like a
+ * hand of cards while two cut-out foliage arrangements drift in from the dark.
  */
 const FAN = [
   { x: -1, r: -11, y: 50 },
@@ -91,15 +91,15 @@ export function Moments() {
           style={{ background: "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(234,160,171,0.14), transparent 70%)" }}
         />
 
-        <div data-cutout="left" className="pointer-events-none absolute -left-[16vw] top-[6%] w-[70vw] opacity-0 md:-left-[6vw] md:w-[42vw]">
-          <Image src={moments.cutouts[0].src} alt="" width={2816} height={1536} sizes="(min-width: 768px) 42vw, 70vw" className="h-auto w-full" />
+        <div data-cutout="left" className="pointer-events-none absolute -left-[16vw] top-[6%] w-[60vw] opacity-0 md:-left-[6vw] md:w-[34vw]">
+          <Image src={moments.cutouts[0].src} alt="" width={moments.cutouts[0].w} height={moments.cutouts[0].h} sizes="(min-width: 768px) 34vw, 60vw" className="h-auto w-full" />
         </div>
-        <div data-cutout="right" className="pointer-events-none absolute -right-[18vw] bottom-[4%] w-[74vw] opacity-0 md:-right-[6vw] md:w-[44vw]">
-          <Image src={moments.cutouts[1].src} alt="" width={2816} height={1536} sizes="(min-width: 768px) 44vw, 74vw" className="h-auto w-full" />
+        <div data-cutout="right" className="pointer-events-none absolute -right-[18vw] bottom-[4%] w-[62vw] opacity-0 md:-right-[6vw] md:w-[34vw]">
+          <Image src={moments.cutouts[1].src} alt="" width={moments.cutouts[1].w} height={moments.cutouts[1].h} sizes="(min-width: 768px) 34vw, 62vw" className="h-auto w-full" />
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center">
-          {moments.bouquets.map((b, i) => (
+          {moments.pieces.map((b, i) => (
             <div
               key={b.src}
               data-card
