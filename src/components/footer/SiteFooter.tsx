@@ -3,7 +3,6 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { Envelope, FacebookLogo, InstagramLogo, Phone, PinterestLogo, TiktokLogo } from "@phosphor-icons/react";
 import { site } from "@/content/story";
-import MakersMark from "@/components/brand/MakersMark";
 import { Monogram } from "@/components/brand/BrandMarks";
 import {
   CONTACT_EMAIL,
@@ -142,7 +141,9 @@ export function SiteFooter() {
 
       <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-5 border-t border-cream/10 pt-6 text-xs tracking-wide md:flex-row">
         <span className="flex items-center gap-3 text-cream/80">
-          <MakersMark size={76} color="currentColor" title={`${site.name} maker’s mark: rooted in love, Albany, NY`} />
+          {/* static, cacheable SVG (25 KB) so the seal stays out of this client component's bundle */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/makers-mark-cotton.svg" width={76} height={76} alt={`${site.name} maker’s mark: rooted in love, Albany, NY`} className="h-[76px] w-[76px] opacity-80" loading="lazy" decoding="async" />
           <Monogram size={34} className="text-gold" />
         </span>
         <span className="text-center">
