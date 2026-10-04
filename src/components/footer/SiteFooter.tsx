@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { Envelope, FacebookLogo, InstagramLogo, Phone, PinterestLogo, TiktokLogo } from "@phosphor-icons/react";
 import { site } from "@/content/story";
+import { Monogram } from "@/components/brand/BrandMarks";
 import {
   CONTACT_EMAIL,
   CONTACT_PAGE,
@@ -113,7 +114,7 @@ function NewsletterForm() {
       </div>
       <label className="flex cursor-pointer items-start gap-3 text-left text-xs leading-relaxed text-cream/70">
         {/* unticked by default: subscribing needs an explicit opt-in */}
-        <input type="checkbox" name="consent" value="yes" defaultChecked={false} className="mt-0.5 h-4 w-4 flex-none accent-[#e9c979]" />
+        <input type="checkbox" name="consent" value="yes" defaultChecked={false} className="mt-0.5 h-4 w-4 flex-none accent-[#c2a061]" />
         <span>Yes, email me about new pieces, workshops and studio news. Unsubscribe any time.</span>
       </label>
       <p id={`${id}-status`} role={status.state === "error" ? "alert" : undefined} aria-live="polite" className="min-h-[1.25rem] text-left text-xs text-[#f0b2a5]">
@@ -139,7 +140,12 @@ export function SiteFooter() {
       </div>
 
       <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-5 border-t border-cream/10 pt-6 text-xs tracking-wide md:flex-row">
-        <span className="display text-base italic text-cream/70">{site.name}</span>
+        <span className="flex items-center gap-3 text-cream/80">
+          {/* static, cacheable SVG (25 KB) so the seal stays out of this client component's bundle */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/makers-mark-cotton.svg" width={76} height={76} alt={`${site.name} maker’s mark: rooted in love, Albany, NY`} className="h-[76px] w-[76px] opacity-80" loading="lazy" decoding="async" />
+          <Monogram size={34} className="text-gold" />
+        </span>
         <span className="text-center">
           {site.place} · Grown by hand by {site.owner} ·{" "}
           <a href={CONTACT_PAGE} className="underline-offset-4 transition hover:text-gold hover:underline">

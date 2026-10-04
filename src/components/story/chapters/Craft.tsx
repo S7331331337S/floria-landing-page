@@ -101,7 +101,7 @@ export function Craft() {
               <div data-panel-text className="md:flex-1 md:pb-8">
                 <span
                   className="display block text-[5.5rem] leading-none text-transparent md:text-[10rem]"
-                  style={{ WebkitTextStroke: "1px rgba(233,201,121,0.65)" }}
+                  style={{ WebkitTextStroke: "1px rgba(194,160,97,0.65)" }}
                 >
                   {step.n}
                 </span>

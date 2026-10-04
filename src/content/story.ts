@@ -36,7 +36,7 @@ export const chapters = [
 // ─────────────────────────────────────────────── 0. Hero: the discovery
 export const hero = {
   eyebrow: "Albany, New York",
-  title: ["La Casa", "Del Amor"],
+  title: ["La Casa", "del Amor"],
   whisper: "A house of living things",
   cue: "Scroll to step inside",
   /** appears as we fall through the moss ball and the greenhouse comes into view */

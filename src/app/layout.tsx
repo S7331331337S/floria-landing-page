@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -9,10 +9,18 @@ const display = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const sans = DM_Sans({
-  variable: "--font-dm-sans",
+// Brand text face (Direction A, Cold-Press Atelier). Variable font, 100-900.
+const sans = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
 });
+
+const OG_IMAGE = {
+  url: "https://welcome.lacasadelamor.app/og/og-welcome.jpg",
+  width: 1200,
+  height: 630,
+  alt: "La Casa del Amor: a kokedama held up in Heather's Albany garden, beside the brand seal",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://welcome.lacasadelamor.app"),
@@ -31,18 +39,18 @@ export const metadata: Metadata = {
     title: "La Casa Del Amor | Living art by Heather Close",
     description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
     url: "https://welcome.lacasadelamor.app",
-    images: [{ url: "https://welcome.lacasadelamor.app/story/exterior.webp", width: 1875, height: 1406, alt: "The La Casa Del Amor greenhouse" }],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "La Casa Del Amor | Living art by Heather Close",
     description: "A house of living things. Step inside Heather's greenhouse studio in Albany, New York.",
-    images: ["https://welcome.lacasadelamor.app/story/exterior.webp"],
+    images: [OG_IMAGE.url],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#06110b",
+  themeColor: "#162016",
   colorScheme: "dark",
 };
 

@@ -58,7 +58,7 @@ export function Sculptures({ pieces = sculptures.plants }: { pieces?: Collection
 
       <div className="sticky top-0 z-10 flex h-[100svh] items-center justify-center px-6">
         <div className="max-w-5xl text-center">
-          <p className="kicker mb-8 text-fern">{sculptures.kicker}</p>
+          <p className="kicker mb-8 text-terracotta-ink">{sculptures.kicker}</p>
           <ScrubWords
             text={sculptures.statement}
             start="top top"
@@ -81,7 +81,7 @@ export function Sculptures({ pieces = sculptures.plants }: { pieces?: Collection
               <div style={{ rotate: `${p.r}deg` }} className="drop-shadow-[0_28px_30px_rgba(60,45,20,0.22)]">
                 <Image src={plate.src} alt="" width={plate.w} height={plate.h} sizes="(min-width: 768px) 19vw, 34vw" className="h-auto w-full" />
               </div>
-              <figcaption className="display mt-1 text-center text-sm italic tracking-wide text-ink/45">{plate.caption}</figcaption>
+              <figcaption className="display mt-1 text-center text-sm italic tracking-wide text-ink/80">{plate.caption}</figcaption>
             </figure>
           );
         })}
@@ -98,7 +98,7 @@ export function Sculptures({ pieces = sculptures.plants }: { pieces?: Collection
               style={{ left: `${f.x}%`, top: `${f.y}%`, "--w": `${f.w}vw`, "--wm": `${f.wm}vw` } as CSSProperties}
             >
               <div
-                className={`group relative overflow-hidden shadow-[0_30px_60px_-20px_rgba(23,32,26,0.45)] ${
+                className={`group relative overflow-hidden shadow-[0_30px_60px_-20px_rgba(44,62,43,0.45)] ${
                   f.shape === "arch" ? "arch aspect-[3/4]" : "aspect-square rounded-full"
                 }`}
               >
@@ -110,9 +110,9 @@ export function Sculptures({ pieces = sculptures.plants }: { pieces?: Collection
                   className="object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-110"
                 />
               </div>
-              <figcaption className="display mt-3 text-center text-lg italic text-ink/70 md:text-xl">
+              <figcaption className="display mt-3 text-center text-lg italic text-ink/80 md:text-xl">
                 {plant.href ? (
-                  <a href={plant.href} className="transition hover:text-fern">
+                  <a href={plant.href} className="transition hover:text-terracotta-ink">
                     {plant.name}
                   </a>
                 ) : (
