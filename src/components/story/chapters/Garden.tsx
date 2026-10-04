@@ -68,13 +68,13 @@ export function Garden() {
           data-golden
           aria-hidden
           className="absolute inset-0 mix-blend-soft-light"
-          style={{ background: "linear-gradient(170deg, rgba(233,201,121,0.85), rgba(234,160,171,0.45) 55%, rgba(6,17,11,0.4))" }}
+          style={{ background: "linear-gradient(170deg, rgba(194,160,97,0.85), rgba(224,169,136,0.45) 55%, rgba(22,32,22,0.4))" }}
         />
         <div aria-hidden className="absolute inset-x-0 top-0 h-[28vh] bg-gradient-to-b from-dusk to-transparent" />
         <div
           aria-hidden
           className="absolute inset-0"
-          style={{ background: "linear-gradient(to top, rgba(6,17,11,0.9) 6%, rgba(6,17,11,0.25) 52%, transparent)" }}
+          style={{ background: "linear-gradient(to top, rgba(22,32,22,0.9) 6%, rgba(22,32,22,0.25) 52%, transparent)" }}
         />
         <Motes density={2} color="255,226,160" />
 

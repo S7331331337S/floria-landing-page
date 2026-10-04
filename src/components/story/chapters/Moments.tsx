@@ -88,7 +88,7 @@ export function Moments() {
         <div
           aria-hidden
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(234,160,171,0.14), transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 60% 55% at 50% 50%, rgba(224,169,136,0.14), transparent 70%)" }}
         />
 
         <div data-cutout="left" className="pointer-events-none absolute -left-[16vw] top-[6%] w-[60vw] opacity-0 md:-left-[6vw] md:w-[34vw]">

@@ -69,7 +69,7 @@ export function Studio() {
   return (
     <section ref={root} id="studio" data-chapter="studio" className="paper-texture relative h-[100svh] overflow-hidden text-ink">
       <div data-copy-a className="absolute inset-x-6 top-[13svh] z-10 md:inset-x-auto md:left-16 md:top-1/2 md:max-w-[40vw] md:-translate-y-1/2">
-        <p className="kicker text-fern">{studio.kicker}</p>
+        <p className="kicker text-terracotta-ink">{studio.kicker}</p>
         <h2 data-studio-heading className="display mt-5 text-[clamp(2.8rem,6.4vw,6rem)] text-balance">
           {studio.heading}
         </h2>
@@ -80,7 +80,7 @@ export function Studio() {
         <div
           data-shade
           className="absolute inset-0 opacity-0"
-          style={{ background: "linear-gradient(to top, rgba(6,17,11,0.9) 5%, rgba(6,17,11,0.35) 50%, rgba(6,17,11,0.05))" }}
+          style={{ background: "linear-gradient(to top, rgba(22,32,22,0.9) 5%, rgba(22,32,22,0.35) 50%, rgba(22,32,22,0.05))" }}
         />
       </div>
 

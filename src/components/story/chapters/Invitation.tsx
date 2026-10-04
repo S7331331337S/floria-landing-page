@@ -72,7 +72,7 @@ export function Invitation() {
       <div
         aria-hidden
         className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(36,71,45,0.3), rgba(6,17,11,0.55) 85%)" }}
+        style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(44,62,43,0.3), rgba(22,32,22,0.55) 85%)" }}
       />
       <div aria-hidden className="mist pointer-events-none absolute -inset-[10%] opacity-25" style={{ animation: "drift 24s ease-in-out infinite alternate" }} />
 
@@ -100,7 +100,7 @@ export function Invitation() {
         <Reveal as="p" split="words" className="kicker text-gold">
           {invitation.kicker}
         </Reveal>
-        <Reveal as="h2" split="words" className="display mt-6 max-w-5xl text-[clamp(3rem,8vw,7.5rem)] text-balance [text-shadow:0_0_50px_rgba(6,17,11,0.9)]">
+        <Reveal as="h2" split="words" className="display mt-6 max-w-5xl text-[clamp(3rem,8vw,7.5rem)] text-balance [text-shadow:0_0_50px_rgba(22,32,22,0.9)]">
           {invitation.heading}
         </Reveal>
         <Reveal className="mt-8 max-w-[44ch] text-lg leading-relaxed text-cream/85 md:text-xl">{invitation.body}</Reveal>
@@ -117,7 +117,7 @@ export function Invitation() {
           </a>
           <a
             href={site.shopUrl}
-            className="group inline-flex h-14 items-center gap-3 rounded-full bg-gold px-8 text-sm font-semibold tracking-wide text-night shadow-[0_20px_50px_-15px_rgba(233,201,121,0.6)] transition duration-500 hover:bg-cream active:scale-[0.98]"
+            className="group inline-flex h-14 items-center gap-3 rounded-full bg-gold px-8 text-sm font-semibold tracking-wide text-night shadow-[0_20px_50px_-15px_rgba(194,160,97,0.6)] transition duration-500 hover:bg-cream active:scale-[0.98]"
           >
             {invitation.shop}
             <ArrowUpRight size={18} weight="bold" className="transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

@@ -201,13 +201,13 @@ export function Discovery() {
         <JunglePlate priority />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(36,71,45,0.35), transparent 75%)" }}
+          style={{ background: "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(44,62,43,0.35), transparent 75%)" }}
         />
         <div
           className="absolute inset-0 opacity-70 mix-blend-screen"
           style={{
             background:
-              "linear-gradient(112deg, transparent 28%, rgba(233,201,121,0.10) 38%, transparent 46%), linear-gradient(104deg, transparent 52%, rgba(233,201,121,0.07) 58%, transparent 63%)",
+              "linear-gradient(112deg, transparent 28%, rgba(194,160,97,0.10) 38%, transparent 46%), linear-gradient(104deg, transparent 52%, rgba(194,160,97,0.07) 58%, transparent 63%)",
           }}
         />
       </div>
@@ -245,7 +245,7 @@ export function Discovery() {
         <div
           data-shade
           className="absolute inset-0 opacity-0"
-          style={{ background: "linear-gradient(to top, rgba(6,17,11,0.92) 8%, rgba(6,17,11,0.45) 45%, rgba(6,17,11,0.15))" }}
+          style={{ background: "linear-gradient(to top, rgba(22,32,22,0.92) 8%, rgba(22,32,22,0.45) 45%, rgba(22,32,22,0.15))" }}
         />
       </div>
 
@@ -258,7 +258,7 @@ export function Discovery() {
         <p data-intro className="kicker mb-6 text-gold opacity-0">
           {hero.eyebrow}
         </p>
-        <h1 className="display text-[clamp(4rem,14vw,13rem)] text-cream [text-shadow:0_0_60px_rgba(6,17,11,0.9)]">
+        <h1 className="display text-[clamp(4rem,14vw,13rem)] text-cream [text-shadow:0_0_60px_rgba(22,32,22,0.9)]">
           <span data-title-line className="block">
             {hero.title[0]}
           </span>
@@ -273,7 +273,7 @@ export function Discovery() {
 
       <p
         data-aside
-        className="display pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center text-4xl italic text-cream opacity-0 [text-shadow:0_2px_40px_rgba(6,17,11,0.8)] md:text-6xl"
+        className="display pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center text-4xl italic text-cream opacity-0 [text-shadow:0_2px_40px_rgba(22,32,22,0.8)] md:text-6xl"
       >
         {hero.aside}
       </p>
@@ -312,7 +312,7 @@ export function Discovery() {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at center, transparent 50%, rgba(6,17,11,0.85) 100%)" }}
+        style={{ background: "radial-gradient(ellipse at center, transparent 50%, rgba(22,32,22,0.85) 100%)" }}
       />
     </section>
   );

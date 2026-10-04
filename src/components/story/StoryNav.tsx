@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { chapters, site } from "@/content/story";
 import { scrollToTarget } from "./fx/SmoothScroll";
+import { KokedamaGlyph } from "@/components/brand/BrandMarks";
 
 /**
  * Minimal floating header, a chapter rail on desktop, and a thin progress
@@ -47,10 +48,14 @@ export function StoryNav() {
         <button
           type="button"
           onClick={() => scrollToTarget(0)}
-          className="display text-xl italic text-white md:text-2xl"
-          aria-label="Back to the beginning"
+          className="flex items-center gap-2.5 text-white md:gap-3"
+          aria-label={`${site.name}: back to the beginning`}
         >
-          {site.name}
+          <KokedamaGlyph size={28} className="h-6 w-6 md:h-7 md:w-7" />
+          <span className="display flex items-baseline gap-[0.35em] whitespace-nowrap text-lg md:text-xl">
+            <span className="font-semibold uppercase tracking-[0.14em]">La Casa</span>
+            <em className="text-[1.12em] font-medium">del Amor</em>
+          </span>
         </button>
         <a
           href={site.shopUrl}
